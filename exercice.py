@@ -3,15 +3,21 @@
 
 
 def is_even_len(string: str) -> bool:
-    return False
+    # return not bool(len(string)%2)
+    return len(string)%2 == 0
+    
+    
 
 
 def remove_third_char(string: str) -> str:
-    return ""
+    return string[:2] + string[3:]
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
+    # return string[:string.find(old_char)] + new_chart + string[string.find(old_char)+1:]
+    
+    old_chart_index = string.find(old_char)
+    return string[:string.find(old_chart)] + new_chart + string[string.find(old_chart)+1:]
 
 
 def get_nb_char(string: str, char: str) -> int:
